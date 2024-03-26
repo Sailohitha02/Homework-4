@@ -92,8 +92,8 @@ def question8():
     answers["(c) P(X_1=1 | -)"] = 0.25
     answers["(c) P(X_2=1 | +)"] = 0.25
     answers["(c) P(X_2=1 | -)"] = 0.16
-    answers["(c) P(X_3=1 | +)"] = 0.4
-    answers["(c) P(X_3=1 | -)"] = 0.32
+    answers["(c) P(X_3=1 | +)"] = 0.2
+    answers["(c) P(X_3=1 | -)"] = 0.16
 
     # For each row give the class predicted by the model after training using Naive Bayes
     # String: either '+' or '-'
