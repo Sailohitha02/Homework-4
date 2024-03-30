@@ -97,8 +97,8 @@ def question8():
 
     # For each row give the class predicted by the model after training using Naive Bayes
     # String: either '+' or '-'
-    answers["(d) Row 1"] = '-'
-    answers["(d) Row 2"] = '-'
+    answers["(d) Row 1"] = '+'
+    answers["(d) Row 2"] = '+'
     answers["(d) Row 3"] = '+'
     answers["(d) Row 4"] = '-'
 
