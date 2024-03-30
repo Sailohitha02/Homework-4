@@ -44,14 +44,14 @@ def question3():
     answers = {}
 
     # string "yes" or "no"
-    answers["(a)"] = "no"
+    answers["(a)"] = "yes"
     answers["(b)"] = "no"
-    answers["(c)"] = "yes"
+    answers["(c)"] = "no"
 
     # explain-string: explanation in english prose
-    answers["(a) example"] = "No, the rules are not mutually exclusive. There exist instances that can satisfy the conditions of more than one rule. For example, consider a warm-blooded bird like a pigeon. It satisfies both R1 (Gives Birth = No, Aerial Creature = Yes) and R3 (Body Temperature = warm-blooded), leading to conflicting class predictions"
+    answers["(a) example"] = "Yes, the rules are mutually exclusive, as the conditions in each rule do not overlap with any other rule."
     answers["(b) example"] = "No, the rules are not exhaustive. There exist instances in the data set that do not satisfy the conditions of any of the given rules. For example, consider an amphibian like a frog. None of the rules cover the case where Gives Birth = No, Aerial Creature = No, Aquatic Creature = Semi"
-    answers["(c) example"] = "Yes, ordering is needed for this set of rules because the rules are not mutually exclusive. When an instance satisfies the conditions of multiple rules, ordering is required to resolve conflicts and determine which rule should take precedence for classification. Without ordering, there would be ambiguity in cases where rules predict different classes for the same instance"
+    answers["(c) example"] = "no, ordering is not needed, as the rules assign different non-overlapping classes and at most one rule will be triggered for any instance."
 
     return answers
 # -----------------------------------------------------------
@@ -59,13 +59,13 @@ def question7():
     answers = {}
 
     # bool: True/False
-    answers["(a)"] = False
+    answers["(a)"] = True
     answers["(b)"] = True
     answers["(c)"] = False
     answers["(d)"] = False
 
     # explain_string: explanation in english prose
-    answers["(a) explain"] = "The statement is false because backpropagation computes gradients at each layer independently based on error signals propagated backward through the network. Gradients at the ( k+1 )th layer depend on subsequent layer's error gradients, not directly on gradients at the ( k )th layer."
+    answers["(a) explain"] = "The backpropagation algorithm for training Artificial Neural Networks (ANNs) involves two phases: forward and backward propagation. In the forward phase, inputs are passed through the network, and neuron outputs are computed layer by layer using weights from the previous iteration. In the backward phase, gradients of weights at each layer are computed recursively, starting from the output layer and moving backward through the network. The gradients of weights at layer k+1 are determined using the gradients of weights at layer k. This approach efficiently adjusts weights to minimize prediction errors, utilizing the chain rule of calculus to propagate error signals backward through the network."
     answers["(b) explain"] = "When applying an Artificial Neural Network (ANN) model, activations in the k+1th layer are computed from the kth layer through forward propagation. The perceptron model, a simple neural network, adjusts weights to fit input-output relationships during training. Learning in a perceptron involves updating weights until predictions align with true outputs of training examples"
     answers["(c) explain"] = "The vanishing gradient problem refers to a situation where gradients during backpropagation become extremely small, leading to slow or ineffective learning. It does not directly relate to the discrepancy between training and test errors"
     answers["(d) explain"] = "Even if an ANN model perfectly classifies all training instances during a back-propagation iteration, the gradients of the loss with respect to weights at all layers will not necessarily be 0. This is because the gradients are computed based on the difference between the predicted and actual outputs, which may not be exactly zero due to noise or other factors."
@@ -103,7 +103,7 @@ def question8():
     answers["(d) Row 4"] = '-'
 
     # float between 0 and 1
-    answers["(d) Training error rate"] = 0.75
+    answers["(d) Training error rate"] = 0.25
 
     return answers
 
